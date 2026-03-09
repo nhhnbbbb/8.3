@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Women's Day</title>
+
+<style>
+body{
+    background: linear-gradient(#ff9a9e,#fad0c4);
+    text-align:center;
+    font-family:Arial;
+    overflow:hidden;
+}
+
+h1{
+    margin-top:100px;
+    font-size:50px;
+    color:white;
+}
+
+p{
+    font-size:28px;
+    color:white;
+}
+
+.heart{
+    position:absolute;
+    color:red;
+    font-size:24px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-10vh);}
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🌸 Happy Women's Day 8/3 🌸</h1>
+
+<p>Chúc bạn luôn xinh đẹp, hạnh phúc và thành công 💖</p>
+
+<img src="https://media.tenor.com/9kY6g3X7p8MAAAAi/flowers.gif" width="200">
+
+<script>
+
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{heart.remove();},6000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
 
